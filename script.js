@@ -1,7 +1,10 @@
+var audio;
+
 $(document).ready(function(){
     $('.message').hide();
     $('#background').hide();
     $('#player').hide();
+    $('.cat2').hide();
 
     $('#playbutton').click(function(){
         $('#background').show();
@@ -16,7 +19,7 @@ $(document).ready(function(){
             moveEnemies();
             collisionDetection();
             enemiesGone();
-            playerDies()
+            playerDies();
         }
         gameLoop();
 
@@ -29,6 +32,9 @@ $(document).ready(function(){
 };
 
 var missiles = [];
+
+audio = new Audio('./Sounds/unknown.ogg');
+
 
 var enemies = [
     { left: 200, top: 100 },
@@ -55,7 +61,8 @@ document.onkeydown = function(e) {
     if (e.keyCode === 37) {
         console.log("left");
         player.left = player.left -10;
-        movePlayer()
+        movePlayer();
+        
     }
     else if (e.keyCode === 39){
         console.log("right");
@@ -72,6 +79,7 @@ document.onkeydown = function(e) {
         
     }
 }
+
 
 function movePlayer () {
     document.getElementById('player').style.left = player.left + "px";
@@ -105,7 +113,7 @@ function drawEnemies() {
 
 function moveEnemies () {
     for ( var cat = 0; cat < enemies.length; cat = cat + 1) {
-        enemies[cat].top = enemies[cat].top + 5;
+        enemies[cat].top = enemies[cat].top + 1;
     }
 }
 
@@ -113,6 +121,11 @@ function enemiesGone (){
     if (enemies === undefined || enemies.length == 0) {
         $('#you-win').fadeIn("slow")
         $('#you-win').delay(2000).fadeOut("slow")
+        audio.play();
+        $('.cat2').show();
+        // console.log("PLAY");
+        
+        
     }
 }
 
@@ -120,9 +133,12 @@ function playerDies () {
     for (var cat = 0; cat < enemies.length; cat = cat +1){
 
         if (enemies[cat].top == 700){
+
+            
             $('#enemies').fadeOut();
             $('#player').fadeOut("slow");
             $('#you-lose').delay(1000).fadeIn("slow")
+            
         }
     }
 

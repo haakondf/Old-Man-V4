@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 .background1 {
     background-image: url('./img/shadyoaks.png');
@@ -12,9 +12,11 @@
 
 #playbutton {
     position: absolute;
-    font-size: 50px;
-    left: 570px;
+    font-size: 40px;
+    left: 100px;
     top: 350px;
+    background-image: url('./img/wood.jpg');
+    color: wheat;
 }
 
 #old-project {
@@ -26,8 +28,10 @@
 
 h1 {
     position: absolute;
-    left: 450px;
+    width: 100%;
     text-align: center;
+    font-family: Anton;
+    letter-spacing: 0.15em;
 }
 
 
@@ -42,7 +46,7 @@ h1 {
     position: absolute;
     top: 30%;
     background: rgba(255,255,255, 0.5);
-    color: red;
+    color: rgb(94, 25, 25);
     padding: 20px;
 }
 
@@ -67,6 +71,15 @@ h1 {
     top: 100px;
     left: 550px;
 }
+.cat2 {
+    background-image: url('./img/cat.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+} 
+
 
 #enemies {
     height: 800px;
