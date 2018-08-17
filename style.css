@@ -1,0 +1,90 @@
+
+
+.background1 {
+    background-image: url('./img/shadyoaks.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 800px;
+    width: 1200px;
+
+}
+
+#playbutton {
+    position: absolute;
+    font-size: 50px;
+    left: 570px;
+    top: 350px;
+}
+
+#old-project {
+    position: absolute;
+    font-size: 50px;
+    left: 570px;
+    top: 450px;
+}
+
+h1 {
+    position: absolute;
+    left: 450px;
+    text-align: center;
+}
+
+
+#background {
+    background-image: url("./img/tarmac.jpg");
+    position: relative;
+    height:800px;
+    width: 1200px;
+
+}
+.message {
+    position: absolute;
+    top: 30%;
+    background: rgba(255,255,255, 0.5);
+    color: red;
+    padding: 20px;
+}
+
+#player {
+    background-image: url("./img/old-man7.png");
+    position: absolute;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    top: 700px;
+    left:550px;
+}
+
+/* enemy */
+.cat {
+    background-image: url('./img/undefined.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 100px;
+    left: 550px;
+}
+
+#enemies {
+    height: 800px;
+    width: 1200px;
+    position: absolute;
+}
+
+#missiles {
+    height: 800px;
+    width: 1200px;
+    position: absolute;
+}
+
+.missile {
+    background-image: url('./img/FF4D00-0.8.png');
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    background-color: red;
+}
+
